@@ -1,22 +1,23 @@
 //std is a crate a library and io is a module wich means a source file that has function already created for us and ready to be used
 use std::io;
-use rand::Rng;
+use rand::Rng;//Rng is a trait, a trait is essential to us to use methods
 
 fn main() {
     println!("guess the number!");
 
     let mut guess = String::new();
     //generate a number between one and hundred each time the program is executed
-
+    //thread_rng is a function that gives us the particular number generator that we're gonne use
+    //gen_range(1..=100) method we used from the trait , and helps us generate numers between a particular range
     let secret_number = rand::thread_rng().gen_range(1..=100);
+
+    println!("{}",secret_number);
 
     println!("please input your guess");
 
     //variables in rust are immutable meaning that once declared we can t change them so we use mut keyword to make them mutable, guess a variable assinged to a new instance
     //of a string String::new , with new is an associated function associated to a datatype
     
-
-    println!("{}",random_number);
     //we can seperate a line into multiple lines in rust
     //stdin is a function provided in io module that will allow us to handle user input properly
     //if we hadn t do use std::io; at the beginig the syntaxe should look like this std::io::stdin().read_line()
