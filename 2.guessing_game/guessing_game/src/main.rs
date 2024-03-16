@@ -1,6 +1,6 @@
 //std is a crate a library and io is a module wich means a source file that has function already created for us and ready to be used
 use std::io;
-use rand::prelude::*;
+use rand::Rng;
 
 fn main() {
     println!("guess the number!");
@@ -11,6 +11,7 @@ fn main() {
     //of a string String::new , with new is an associated function associated to a datatype
     let mut guess = String::new();
     let mut rng = thread_rng();
+    //generate a number between one and hundred each time the program is executed
     let random_number: i32 = rng.gen_range(0..100);
 
     println!("{}",random_number);
