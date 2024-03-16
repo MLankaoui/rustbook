@@ -1,5 +1,6 @@
 //std is a crate a library and io is a module wich means a source file that has function already created for us and ready to be used
 use std::io;
+use rand::prelude::*;
 
 fn main() {
     println!("guess the number!");
@@ -9,8 +10,10 @@ fn main() {
     //variables in rust are immutable meaning that once declared we can t change them so we use mut keyword to make them mutable, guess a variable assinged to a new instance
     //of a string String::new , with new is an associated function associated to a datatype
     let mut guess = String::new();
+    let mut rng = thread_rng();
+    let random_number: i32 = rng.gen_range(0..100);
 
-
+    println!("{}",random_number);
     //we can seperate a line into multiple lines in rust
     //stdin is a function provided in io module that will allow us to handle user input properly
     //if we hadn t do use std::io; at the beginig the syntaxe should look like this std::io::stdin().read_line()
