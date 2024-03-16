@@ -5,14 +5,16 @@ use rand::Rng;
 fn main() {
     println!("guess the number!");
 
+    let mut guess = String::new();
+    //generate a number between one and hundred each time the program is executed
+
+    let secret_number = rand::thread_rng().gen_range(1..=100);
+
     println!("please input your guess");
 
     //variables in rust are immutable meaning that once declared we can t change them so we use mut keyword to make them mutable, guess a variable assinged to a new instance
     //of a string String::new , with new is an associated function associated to a datatype
-    let mut guess = String::new();
-    let mut rng = thread_rng();
-    //generate a number between one and hundred each time the program is executed
-    let random_number: i32 = rng.gen_range(0..100);
+    
 
     println!("{}",random_number);
     //we can seperate a line into multiple lines in rust
