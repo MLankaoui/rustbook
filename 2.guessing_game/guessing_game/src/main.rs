@@ -1,5 +1,6 @@
 //std is a crate a library and io is a module wich means a source file that has function already created for us and ready to be used
 use std::io;
+use std::cmp::Ordering;
 use rand::Rng;//Rng is a trait, a trait is essential to us to use methods
 
 fn main() {
@@ -28,7 +29,9 @@ fn main() {
         .expect("failed to read user input");// exept is also from Result if the error is in , except will crash the progam and prints the error msg but if ok, the exept
         //will return the number of bytes you have on the string , if you don t call exept your code will compile but we ll get a warning
 
-        println!("Your guess {guess}");
+    //we used shadowing so that we can define the same vaiable more than one time
+    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+    println!("Your guess {guess}");
 
         /*
         let x = 5;
@@ -36,5 +39,11 @@ fn main() {
 
         println!("x = {x} and y + 2 = {}", y + 2);
          */
+
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small!"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => println!("You win!"),
+    }
 
 }
