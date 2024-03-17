@@ -79,4 +79,21 @@ fn main() {
     let six_point_four = x.1;
 
     let one = x.2;
+
+    //arrays have a fixed length in rust and the elements must be the same type
+    //we use arrays if we wanna store data on the stack not the heap
+    let a = [1, 2, 3, 4, 5]
+
+    //vectors are not length fixed, it is flexible unlike the arrays,
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    //to initialise an array with same value
+    let a = [3; 5] // similar to let a = [3, 3, 3, 3, 3]
+
+    //accessing element of an array by indexing
+    let a = [1, 2, 3, 4, 5];
+
+    let first = a[0];
+    let second = a[1];
+
 }
