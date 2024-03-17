@@ -46,4 +46,27 @@ fn main() {
 
     // remainder
     let remainder = 43 % 5;
+
+    //booleans in rust: 1 byte 0 or 1
+    let t = true;
+
+    let f: bool = fale;
+
+    //char: 4bytes
+
+    let c = 'z';
+    let z: char = 'ℤ'; // with explicit type annotation
+    let heart_eyed_cat = '😻';
+
+    //after we are done with scalar let s learn about compound types
+    /*tuples for example have fixed length, they can t grow or shrink size */
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+    //tup takes the 3 values cause it s a single compound element
+    //so we use pattern matching to destructure a tuple value
+
+    let (x, y, z) = tup;
+
+    println!("The value of y is : {y}")
 }
