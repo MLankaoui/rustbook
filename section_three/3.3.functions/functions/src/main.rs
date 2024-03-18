@@ -9,6 +9,9 @@ fn main() {
     };
     
     println!("The value of y is: {y}");
+
+    let x = five();
+    println!("The value of x is: {x}");
 }
 //it doesn t matter where to put this function as long as their defined somewhere in a scope that can be seen by the caller
 fn another_function(x: i32) {
@@ -32,4 +35,7 @@ fn print_labeled_measurements(value: i32, unit_label: char) {
 //let x = (let y = 6)
 
 
-//functions with return values
+//functions with return values it s an expression
+fn five() -> i32 {
+    5
+}
