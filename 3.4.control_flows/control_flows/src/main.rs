@@ -79,4 +79,35 @@ fn main() {
     }
 
     println!("End count: {countt}");
+    //while loops in rust
+    //a loop that keep perfomring until the condition is not satisfied anymore
+
+    let mut numberss = 3;
+
+    while numberss != 0 {
+        println!("{number}");
+        numberss -= 1;
+    }
+
+    // we can use while loops to iteratte thru elements of a collection
+
+    let a = [10, 20, 30, 40, 50];
+
+    let mut index = 0;
+
+    while index < 5 {
+        println!("the value is: {}", a[index]);
+        index += 1;
+    }
+
+    let b = [10, 20, 30, 40, 50];
+
+    for element in b {
+        println!("{}", element);
+    }
+
+    // how to reverse an elements within a range
+    for numbersss in (1..4).rev() {
+        println!("{numbersss}");
+    }
 }
