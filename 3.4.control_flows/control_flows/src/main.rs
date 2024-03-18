@@ -36,8 +36,22 @@ fn main() {
 
     // repetitions with loops
     //we can stop the loop using break
-
-    loop {
+    // this is an infinite loop
+    /*loop {
         println!("again!");
-    }
+    }*/
+
+    //returning values from loops
+    let mut counter = 0;
+    //result variable holds the value returned by the loop
+    //the loop will continue until counter == 10 than breaks and multiply counter * 2
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is: {result}");
 }
