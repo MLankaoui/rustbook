@@ -29,8 +29,15 @@ fn main() {
     //using if in a let statement
 
     let condition = false;
-
+    // the values types should be the same
     let number_three = if condition {5} else {6};
 
     println!("The value of number_three is: {number_three}");
+
+    // repetitions with loops
+    //we can stop the loop using break
+
+    loop {
+        println!("again!");
+    }
 }
