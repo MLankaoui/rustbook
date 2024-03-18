@@ -54,4 +54,29 @@ fn main() {
     };
 
     println!("The result is: {result}");
+
+    //loop labels
+    let mut countt = 0;
+    //counting_up is a label ofr the outer loop
+    //here is an nested loops example
+    'counting_up: loop {
+        println!("count = {countt}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remainig = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if countt == 2 {
+                break 'counting_up;
+            }
+
+            remaining -= 1;
+        }
+
+        countt += 1;
+    }
+
+    println!("End count: {countt}");
 }
